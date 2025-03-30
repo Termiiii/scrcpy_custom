@@ -1,5 +1,5 @@
 #include "scrcpy.h"
-
+#include "plugin.h"
 #include <assert.h>
 #include <inttypes.h>
 #include <stdbool.h>
@@ -162,6 +162,7 @@ sdl_configure(bool video_playback, bool disable_screensaver) {
     } else {
         SDL_EnableScreenSaver();
     }
+	plugin_init();
 }
 
 static enum scrcpy_exit_code
